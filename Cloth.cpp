@@ -408,6 +408,7 @@ void cCloth::IntegrateImplicit(double timestep, const Eigen::VectorXd& X, const 
 								Eigen::VectorXd& out_X, Eigen::VectorXd& out_V)
 {
 	// TODO (CPSC426): Implement implicit euler
+	BuildJacobian(X, V, mJ); // build Jacobian and store it in mJ
 }
 
 void cCloth::EvalDerivative(const Eigen::VectorXd& X, const Eigen::VectorXd& V, Eigen::VectorXd& out_dX, Eigen::VectorXd& out_dV)
